@@ -12,7 +12,7 @@ And in a second terminal:
 
     $ curl -i -XPOST http://localhost:8080/train \
            -H "Content-Type: multipart/form-data" \
-           -F "dataset=@./samples/superheroes.jsonl"
+           -F "dataset=@./samples/superheroes.v2.jsonl"
 
 You should get something like:
 
