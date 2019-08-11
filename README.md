@@ -23,13 +23,13 @@ You should get something like:
 
     {"Success":true,"Label":"SUPERHERO"}
 
-Then fire a quick search:
+Then fire a quick analysis:
 
     $ curl -i -XPOST http://localhost:8080/recognize \
            -H "Content-Type: application/json" \
            -d'{"Model":"SUPERHERO","content":"Batman blah blah blah before Thor blah blah. Well, of course, blah blah blah in Gotham City, and blah blah blah while The Joker and Wolverine was in Canada. Batman again. Annnd Batman blah blah again. How about Thor? I do not know."}'
 
-Annnd boom!
+Annnd boom! There we have it:
 
     Content-Type: application/json
     Date: Sun, 11 Aug 2019 21:10:08 GMT
