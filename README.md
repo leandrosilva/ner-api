@@ -27,7 +27,7 @@ Then fire a quick search:
 
     $ curl -i -XPOST http://localhost:8080/recognize \
            -H "Content-Type: application/json" \
-           -d'{"Model":"SUPERHERO","content":"Batman blah blah blah Thor, blah blah in Gotham City, blah blah blah The Joker"}'
+           -d'{"Model":"SUPERHERO","content":"Batman blah blah blah before Thor blah blah. Well, of course, blah blah blah in Gotham City, and blah blah blah while The Joker and Wolverine was in Canada. Batman again. Annnd Batman blah blah again. How about Thor? I do not know."}'
 
 Annnd boom!
 
@@ -43,10 +43,22 @@ Annnd boom!
                 "Text": "Batman",
                 "Label": "SUPERHERO"
             },
-            "Count": 1
+            "Count": 3
         }, {
             "Entity": {
                 "Text": "Thor",
+                "Label": "SUPERHERO"
+            },
+            "Count": 2
+        }, {
+            "Entity": {
+                "Text": "Joker",
+                "Label": "SUPERVILLAIN"
+            },
+            "Count": 1
+        }, {
+            "Entity": {
+                "Text": "Wolverine",
                 "Label": "SUPERHERO"
             },
             "Count": 1
