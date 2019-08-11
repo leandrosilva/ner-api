@@ -1,6 +1,6 @@
 # NER-API
 
-This is a simple API to play with Named Entity Recognition and Go. Why? Why not.
+This is a simple API to play with `Named Entity Recognition` and `Go`. Why? Well, why not.
 
 ## Try it out
 
@@ -29,7 +29,7 @@ Then fire a quick analysis:
            -H "Content-Type: application/json" \
            -d'{"Model":"SUPERHERO","content":"Batman blah blah blah before Thor blah blah. Well, of course, blah blah blah in Gotham City, and blah blah blah while The Joker and Wolverine was in Canada. Batman again. Annnd Batman blah blah again. How about Thor? I do not know."}'
 
-Annnd boom! There we have it:
+Annnd boom! There you have it:
 
     Content-Type: application/json
     Date: Sun, 11 Aug 2019 21:10:08 GMT
