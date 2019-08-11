@@ -10,7 +10,9 @@ In one terminal:
 
 And in a second terminal:
 
-    $ curl -i -XPOST http://localhost:8080/train -H "Content-Type: multipart/form-data" -F "dataset=@./samples/superheroes.jsonl"
+    $ curl -i -XPOST http://localhost:8080/train \
+           -H "Content-Type: multipart/form-data" \
+           -F "dataset=@./samples/superheroes.jsonl"
 
 You should get something like:
 
@@ -23,7 +25,9 @@ You should get something like:
 
 Then fire a quick search:
 
-    $ curl -i -XPOST http://localhost:8080/recognize -H "Content-Type: application/json" -d'{"Model":"SUPERHERO","content":"Batman blah blah blah Thor, blah blah in Gotham City, blah blah blah The Joker"}'
+    $ curl -i -XPOST http://localhost:8080/recognize \
+           -H "Content-Type: application/json" \
+           -d'{"Model":"SUPERHERO","content":"Batman blah blah blah Thor, blah blah in Gotham City, blah blah blah The Joker"}'
 
 Annnd boom!
 
@@ -31,7 +35,23 @@ Annnd boom!
     Date: Sun, 11 Aug 2019 21:10:08 GMT
     Content-Length: 165
 
-    {"Success":true,"Model":"SUPERHERO","Entities":[{"Entity":{"Text":"Batman","Label":"SUPERHERO"},"Count":1},{"Entity":{"Text":"Thor","Label":"SUPERHERO"},"Count":1}]}
+    {
+        "Success": true,
+        "Model": "SUPERHERO",
+        "Entities": [{
+            "Entity": {
+                "Text": "Batman",
+                "Label": "SUPERHERO"
+            },
+            "Count": 1
+        }, {
+            "Entity": {
+                "Text": "Thor",
+                "Label": "SUPERHERO"
+            },
+            "Count": 1
+        }]
+    }
 
 ## How about edge cases?
 
